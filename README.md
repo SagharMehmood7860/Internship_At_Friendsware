@@ -4,7 +4,7 @@ A clean, minimalist single-screen mobile application built using React Native an
 
 The application allows users to seamlessly log personal expenses, view them in a scrollable list, delete entries dynamically, and track their live running total balance formatted in PKR.
 
-## 📱 Features Implemented (Day 2 Milestone)
+## 📱 Features Implemented (Core Deliverables)
 - **Add Expense Form:** Title text input, positive numeric amount validation, and specific category picker (Food, Transport, Utilities, Entertainment, Other).
 - **Form Validation:** Dynamic inline error handling to block empty fields or negative amounts.
 - **Dynamic Expense List:** Renders all added logs dynamically with proper currency formatting (`PKR X,XXX`).
@@ -13,9 +13,23 @@ The application allows users to seamlessly log personal expenses, view them in a
 
 ---
 
+## 🌟 BONUS TASKS COMPLETED (Day 3 Milestones)
+As per the Week Zero Bonus Task List guidelines, the following additional challenges have been implemented under separate commits:
+
+### 🚀 B2 — Category Filter Tabs
+- Added a horizontal scrollable row of tab buttons above the expense list containing: **All, Food, Transport, Utilities, Entertainment, Other**.
+- Tapping a specific tab dynamically updates the list view state to show only the matching categorized items.
+- Integrated conditional active styling so the currently active tab pill is visually distinct with a solid blue background.
+
+### 📊 B4 — Filtered Running Total Aggregations
+- Enhanced the mathematical engine to calculate the live aggregate total based on the **currently active filter view** rather than just the global array.
+- Switching tabs automatically updates the footer balance via a clean execution flow, showing an accurate running total of expenses for that specific category.
+
+---
+
 ## 🛠️ Tech Stack & Dependencies
 - **Framework:** React Native (Expo CLI - Blank Workflow)
-- **Components:** React Native Core Components (`FlatList`, `TextInput`, `SafeAreaView`)
+- **Components:** React Native Core Components (`FlatList`, `TextInput`, `SafeAreaView`, `ScrollView`)
 - **Picker:** `@react-native-picker/picker` (Official Community Picker)
 
 ---
@@ -31,7 +45,6 @@ Make sure you have **Node.js** installed on your machine and the **Expo Go** app
 Clone the repository (or download the source files) and navigate to the project root folder:
 ```bash
 cd ExpenseTracker
-
 Install the project dependencies configured inside package.json:
 
 Bash
@@ -43,5 +56,3 @@ Bash
 npx expo start -c
 4. Deploy on Device
 Physical Device: Open the Expo Go app on your Android smartphone, scan the generated terminal QR code, and wait for the JavaScript bundle to load completely.
-
-Android Emulator: Ensure your virtual device is running in Android Studio, then press a in your project terminal to launch the app automatically.
